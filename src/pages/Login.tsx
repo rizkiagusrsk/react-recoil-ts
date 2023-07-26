@@ -1,7 +1,7 @@
 import { useSetRecoilState } from "recoil";
 import reactLogo from "../assets/react.svg";
 import viteLogo from "/vite.svg";
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { userData } from "../store";
 import { useNavigate } from "react-router-dom";
 
@@ -11,10 +11,10 @@ export const Login = () => {
   const setUser = useSetRecoilState(userData);
   const navigate = useNavigate();
 
-  const onChangeEmail = (e) => {
+  const onChangeEmail = (e: ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
   };
-  const onChangePassword = (e) => {
+  const onChangePassword = (e: ChangeEvent<HTMLInputElement>) => {
     setPassword(e.target.value);
   };
 
