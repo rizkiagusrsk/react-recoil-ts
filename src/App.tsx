@@ -1,6 +1,6 @@
 // import { useState } from "react";
 import { Navbar } from "./components/Navbar";
-import { Router } from "./router";
+import { Router } from "./routes";
 import { useRecoilValue } from "recoil";
 import { userData } from "./store";
 
